@@ -25,24 +25,22 @@ class Calculator{
 			return num1/num2;
 		}
 	}
-	
 public class ArithmeticCalculator {
 	public static void main(String[] args) {
 		//Takes user input
 		Scanner input = new Scanner(System.in);
+		while(true) {
 		//Asks first input
 		System.out.println("Enter the First number: ");
 		double num1 = input.nextDouble();
-		//Asks the operator 
-		System.out.println("Enter the operator (+,-,*,/): ");
-		String operator = input.next();
 		//Asks second input
 		System.out.println("Enter the Second number");
 		double num2 = input.nextDouble();
-		
 		Calculator calc= new Calculator(num1,num2);
 		double result=0;
-		//Using Switch case
+		//Asks the operator 
+		System.out.println("Enter the operator (+,-,*,/): ");
+		String operator = input.next();
 		switch(operator)
 		{
 		case "+" :result=calc.add();
@@ -54,8 +52,10 @@ public class ArithmeticCalculator {
 		case "/" :result=calc.division();
 				  break;
 		default:System.out.println("Invalid Operation");
+				break;
 		}
 		//Provides output
 		System.out.println(num1+operator+num2+"="+result);
+	}
 	}
 }
