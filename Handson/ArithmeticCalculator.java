@@ -54,6 +54,7 @@ public class ArithmeticCalculator {
 		case "/" :result=calc.division();
 				  break;
 		default:System.out.println("Invalid Operation");
+				break;
 		}
 		//Provides output
 		System.out.println(num1+operator+num2+"="+result);
